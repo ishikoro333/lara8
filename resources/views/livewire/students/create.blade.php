@@ -1,7 +1,7 @@
 
 <div>
     <button type="button" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border gray-400 rounded shadow" wire:click.prevent="openModal()">新規追加</button>
-    <x-jet-modal wire:modal="modalStatus">
+    <x-jet-modal wire:model="modalStatus">
         <x-slot name="slot">
             <div class="flex justify-between items-center border-b p-2 text-xl">
                 <div></div>
@@ -18,7 +18,7 @@
                             </label>
                         </div>
                         <div class="md:w-2/3">
-                            <input type="text" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple 500" id="inline-first-name", placeholder="" name="firstname" wire:modal="firstname">
+                            <input type="text" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple 500" id="inline-first-name", placeholder="" name="firstname" wire:model="firstname">
                             @error('firstname')
                                 <span class="block sm:inline text-red-700">{{ $message }}</span>
                             @enderror
@@ -31,7 +31,7 @@
                             </label>
                         </div>
                         <div class="md:w-2/3">
-                            <input type="text" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple 500" id="inline-last-name", placeholder="" name="lastname" wire:modal="lastname">
+                            <input type="text" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-last-name", placeholder="" name="lastname" wire:model="lastname">
                             @error('lastname')
                                 <span class="block sm:inline text-red-700">{{ $message }}</span>
                             @enderror
@@ -44,7 +44,7 @@
                             </label>
                         </div>
                         <div class="md:w-2/3">
-                            <input type="email" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple 500" id="inline-email" placeholder="" name="email" wire:modal="email">
+                            <input type="email" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-email" placeholder="" name="email" wire:model="email">
                             @error('email')
                                 <span class="block sm:inline text-red-700">{{ $message }}</span>
                             @enderror
@@ -57,14 +57,14 @@
                             </label>
                         </div>
                         <div class="md:w-2/3">
-                            <input type="text" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple 500" id="inline-phone-number", placeholder="" name="phone" wire:modal="phone">
+                            <input type="text" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-phone-number", placeholder="" name="phone" wire:model="phone">
                             @error('phone')
                                 <span class="block sm:inline text-red-700">{{ $message }}</span>
                             @enderror
                         </div>
                     </div>
                     <div class="flex justify-end">
-                        <button class="shadow bg-purple 500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button" wire:click.prevent="store()">追加する</button>
+                        <button class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-dark font-bold py-2 px-4 rounded" type="button" wire:click.prevent="store()">追加する</button>
                     </div>
                 </form>
             </div>
