@@ -10,13 +10,14 @@
         <div class="px-6 py-4">
             <div class="font-bold text-xl mb-2">生徒一覧</div>
             @include('livewire.students.create')
+            @include('livewire.students.edit')
         </div>
         <div class="px-6 pt-4 pb-2">
             <table class="table-auto w-full">
                 <thead>
                     <tr>
-                        <th class="px-4 py-2">名前</th>
                         <th class="px-4 py-2">苗字</th>
+                        <th class="px-4 py-2">名前</th>
                         <th class="px-4 py-2">メールアドレス</th>
                         <th class="px-4 py-2">電話番号</th>
                         <th></th>
@@ -26,11 +27,13 @@
                 <tbody>
                     @foreach($students as $student)
                         <tr>
-                            <td class="border px-4 py-2">{{ $student -> firstname }}</td>
                             <td class="border px-4 py-2">{{ $student -> lastname }}</td>
+                            <td class="border px-4 py-2">{{ $student -> firstname }}</td>
                             <td class="border px-4 py-2">{{ $student -> email }}</td>
                             <td class="border px-4 py-2">{{ $student -> phone }}</td>
-                            <td class="border px-4 py-2">編集</td>
+                            <td class="border px-4 py-2">
+                                <button class="bg-white hover:bg-gray-100 text-gray-800 text-semibold py-2 px-4 border border-gray-400 rounded shadow" wire:click.prevent="openUpdateModal({{ $student -> id }})">編集</button>
+                            </td>
                             <td class="border px-4 py-2">削除</td>
                         </tr>
                     @endforeach
