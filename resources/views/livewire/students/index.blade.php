@@ -34,7 +34,9 @@
                             <td class="border px-4 py-2">
                                 <button class="bg-white hover:bg-gray-100 text-gray-800 text-semibold py-2 px-4 border border-gray-400 rounded shadow" wire:click.prevent="openUpdateModal({{ $student -> id }})">編集</button>
                             </td>
-                            <td class="border px-4 py-2">削除</td>
+                            <td class="border px-4 py-2">
+                                <button type="submit" class="bg-white hover:bg-gray-100 text-gray-400 text-semibold py-2 px-4 border border-gray-400 rounded shadow" wire:click.prevent="delete({{ $student->id }})">削除</button>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>

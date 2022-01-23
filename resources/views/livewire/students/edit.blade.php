@@ -17,7 +17,7 @@
                             </label>
                         </div>
                         <div class="md:w-2/3">
-                            <input type="text" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple 500" id="inline-first-name", placeholder="{{ $student->lastname }}" name="lastname" wire:model="lastname">
+                            <input type="text" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple 500" id="inline-first-name", placeholder="" name="lastname" wire:model="lastname">
                             @error('lastname')
                                 <span class="block sm:inline text-red-700">{{ $message }}</span>
                             @enderror
@@ -30,7 +30,7 @@
                             </label>
                         </div>
                         <div class="md:w-2/3">
-                            <input type="text" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-first-name", placeholder="{{ $student->firstname }}" name="firstname" wire:model="firstname">
+                            <input type="text" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-first-name", placeholder="" name="firstname" wire:model="firstname">
                             @error('firstname')
                                 <span class="block sm:inline text-red-700">{{ $message }}</span>
                             @enderror
@@ -43,7 +43,7 @@
                             </label>
                         </div>
                         <div class="md:w-2/3">
-                            <input type="email" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-email" placeholder="{{ $student->email }}" name="email" wire:model="email">
+                            <input type="email" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-email" placeholder="" name="email" wire:model="email">
                             @error('email')
                                 <span class="block sm:inline text-red-700">{{ $message }}</span>
                             @enderror
@@ -56,7 +56,7 @@
                             </label>
                         </div>
                         <div class="md:w-2/3">
-                            <input type="text" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-phone-number", placeholder="{{ $student->phone }}" name="phone" wire:model="phone">
+                            <input type="text" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-phone-number", placeholder="" name="phone" wire:model="phone">
                             @error('phone')
                                 <span class="block sm:inline text-red-700">{{ $message }}</span>
                             @enderror
